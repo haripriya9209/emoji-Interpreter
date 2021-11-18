@@ -23,15 +23,13 @@ export default function App() {
   };
 
   var clickEmoji = (Event) => {
-    console.log(emojiDictionary[Event]);
-    // var input = Event.target.value;
     var message = emojiDictionary[Event];
     return funcInput(message);
   };
   return (
     <div className="App">
       <h1>Emoji App</h1>
-      <input onChange={search}></input>
+      <input placeholder="search by emoji" onChange={search}></input>
       <div className="output">{usrInput}</div>
       <h3>emojis we know</h3>
       {Emojiarr.map((emoji) => {
